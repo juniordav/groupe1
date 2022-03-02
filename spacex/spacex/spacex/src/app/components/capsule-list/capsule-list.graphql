@@ -1,0 +1,5 @@
+query pastCapsulesList($limit: Int!) {
+    capsulesPast(limit: $limit){
+    
+    }
+}
