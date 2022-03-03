@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Capsule } from '../models/Capsule';
 import { AbstractService } from './abstract.service';
+import {Launch} from "src/app/models/Launch"
 
 @Injectable({
   providedIn: 'root'
 })
-export class CapsuleService {
+export class LaunchService {
 
-  lauchesapiUrl: string = "api/capsules";
+  lauchesapiUrl: string = "/launches";
 
   constructor(private http: HttpClient, private abstractService: AbstractService){}
 
-  public getAllCapsules<Response>() {
-     return this.http.get<Capsule[]>(this.abstractService.getUrl(this.lauchesapiUrl));
+  public getAllLaunches<Response>() {
+     return this.http.get<Launch[]>(this.abstractService.getUrl(this.lauchesapiUrl));
   }
 
 }
