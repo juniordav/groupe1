@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Capsule } from './models/Capsule';
+import { Launch } from './models/Launch';
 import { CapsuleService } from './services/capsule.service';
+import { LaunchService } from './services/launch_service';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +11,16 @@ import { CapsuleService } from './services/capsule.service';
 })
 export class AppComponent implements OnInit {
   title = 'spacex';
-  capsules: any;
+  capsules!: Capsule[];
+  launches!: Launch[];
 
-  constructor(private capsuleservice: CapsuleService){}
+  constructor(private capsuleservice: CapsuleService, private launchService: LaunchService) { }
 
   ngOnInit(): void {
 
-    this.getAllCapsules();
-    
-  }
-
-  getAllCapsules(){
-      this.capsules = this.capsuleservice.getAllCapsules().subscribe();
-      console.log("launches", this.capsules );
-
+   
 
   }
-
-
 
 
 }

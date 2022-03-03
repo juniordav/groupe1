@@ -7,26 +7,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AppConfig {
 
-    public version: string = "1.0.0";
-    public locale: string = "fr-FR";
-    public currencyFormat = { style: "currency", currency: "USD" };
-    public apiProtocol: string | undefined;
-    public apiHostName: string | undefined;
     public baseApiPath: string;
-
     constructor() {
-        if (this.apiProtocol === undefined) {
-            this.apiProtocol = window.location.protocol;
-        }
+        this.baseApiPath = "https://" + GlobalVariables.appContext + "/";
 
-        this.baseApiPath = this.apiProtocol + "//" + GlobalVariables.appContext + "/";
-        if (this.locale === undefined) {
-            this.locale = navigator.language;
-        }
     }
 }
 
 export const GlobalVariables = Object.freeze({
-    //inProduction: true,
     appContext: API_URL,
 });

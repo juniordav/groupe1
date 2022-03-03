@@ -8,7 +8,7 @@ import {Launch} from "src/app/models/Launch"
 })
 export class LaunchService {
 
-  lauchesapiUrl: string = "/launches";
+  lauchesapiUrl: string = "launches";
 
   constructor(private http: HttpClient, private abstractService: AbstractService){}
 

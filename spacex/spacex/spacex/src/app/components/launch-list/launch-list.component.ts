@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Launch } from 'src/app/models/Launch';
+import { LaunchService } from 'src/app/services/launch_service';
 
 @Component({
   selector: 'app-launch-list',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaunchListComponent implements OnInit {
 
-  constructor() { }
+  launches!: Launch[];
+  constructor(private launchService: LaunchService) { }
 
   ngOnInit(): void {
+  }
+
+  getAllLaunches() {
+
+    this.launchService.getAllLaunches().subscribe(
+      data => this.launches = data
+    )
+
+    console.log("launches", this.launches);
+
   }
 
 }

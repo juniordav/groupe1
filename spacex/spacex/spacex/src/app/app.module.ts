@@ -12,6 +12,7 @@ import { CapsuleDetailComponent } from './components/capsule-list/capsule-detail
 import { LaunchListComponent } from './components/launch-list/launch-list.component';
 import { LaunchDetailComponent } from './components/launch-list/launch-detail/launch-detail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { AbstractService } from './services/abstract.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [LaunchService, CapsuleService, AppConfig],
+  providers: [LaunchService,AbstractService, CapsuleService, AppConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

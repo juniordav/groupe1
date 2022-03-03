@@ -14,7 +14,7 @@ export class CapsuleService {
 
   public getAllCapsules<Response>() {
     
-     return this.http.get<Capsule[]>(this.abstractService.getUrl(this.capsulesapiUrl), { headers: this.abstractService.getOption().headers, observe: 'response' });
+     return this.http.get<Capsule[]>(this.abstractService.getUrl(this.capsulesapiUrl));
   }
 
 }
