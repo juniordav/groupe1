@@ -12,6 +12,7 @@ import { CapsuleDetailComponent } from './components/capsule-list/capsule-detail
 import { LaunchListComponent } from './components/launch-list/launch-list.component';
 import { LaunchDetailComponent } from './components/launch-list/launch-detail/launch-detail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { LaunchItemComponent } from './launch-item/launch-item.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     LaunchListComponent,
     LaunchDetailComponent,
     HomepageComponent
+   
   ],
   imports: [
     BrowserModule,

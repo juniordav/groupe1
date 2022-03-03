@@ -1,13 +1,13 @@
 export class Launch {
-    constructor(
-     public rocket_id: string,
-     public rocket_name: string,
-     public rocket_type : string,
-     public nationality: string,
-     public customer: string,
-     public land_success : boolean,
-     public land_vehicule : boolean,
-     public launch_date_local : Date
+    
+     rocket_id!: string;
+     rocket_name!: string;
+     rocket_type! : string;
+     nationality!: string;
+     customer!: string;
+     land_success! : boolean;
+     land_vehicule! : boolean;
+     launch_date_local! : Date
      
-    ) { }
+     
   }
