@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Capsule } from 'src/app/models/Capsule';
+import { CapsuleService } from 'src/app/services/capsule.service';
 
 @Component({
   selector: 'app-capsule-list',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CapsuleListComponent implements OnInit {
 
-  constructor() { }
+  capsules!: Capsule[];
+  constructor(private capsuleservice: CapsuleService) { }
 
   ngOnInit(): void {
+
+    this.getAllCapsules();
+  }
+
+  getAllCapsules() {
+
+    this.capsuleservice.getAllCapsules().subscribe(
+      data => this.capsules = data
+    )
+
   }
 
 }

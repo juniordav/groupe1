@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'capsule-list', component: CapsuleListComponent},
   {path: 'launch-list', component: LaunchListComponent},
   {path: 'capsule-detail/:id', component: CapsuleDetailComponent},
-  {path: 'launch-detail/:id', component: LaunchDetailComponent},
+  {path: 'launch-list/launch-detail/:id', component: LaunchDetailComponent},
 
 ];
 
