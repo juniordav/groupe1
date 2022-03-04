@@ -17,7 +17,7 @@ export class LaunchService {
   }
 
   public getOneLaunch<Response>(id : number) {
-    return this.http.get<Launch>(this.abstractService.getUrl(this.lauchesapiUrl + '/' + `?flight_number=${id}`));
+    return this.http.get<Launch[]>(this.abstractService.getUrl(this.lauchesapiUrl + '/' + `?flight_number=${id}`));
  }
 
 }

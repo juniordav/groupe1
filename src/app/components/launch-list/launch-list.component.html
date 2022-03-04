@@ -1,4 +1,5 @@
 
+  
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -6,10 +7,11 @@
     <ul class = "list-group">
         <li class="list-group-item" *ngFor="let launch of launches">Mission : {{launch.mission_name}} 🚀
         <button type="button" class="btn btn-primary btn-lg"
-        routerLink="launch-detail/{{launch.flight_number}}">Voir détail</button> </li>
+         (click)="detail(launch.flight_number)">Voir détail</button> </li>
        
     </ul>
     </div>
 </div>
 </div>
+
 

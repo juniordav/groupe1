@@ -11,26 +11,28 @@ import { LaunchService } from 'src/app/services/launch_service';
 })
 export class LaunchDetailComponent implements OnInit {
 
-  launch! : Launch;
+  launches! : Launch[];
 
   constructor(private route : ActivatedRoute, private launchService : LaunchService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    this.launch = this.getOneLaunch(id);
+    this.getOneLaunch(id);
 
 
   }
 
 
-  getOneLaunch(id : number) : Launch {
-    let oneLaunch! : Launch ;
-    this.launchService.getOneLaunch(id).subscribe(
-      data => oneLaunch = data
-    );
-    console.log("getOneLaunch", oneLaunch);
+   getOneLaunch(id : number)  {
+    
+   this.launchService.getOneLaunch(id).subscribe(
+      data => {
+        this.launches = data
+        console.log(this.launches);
 
-    return oneLaunch;
+      }
+    );
+  
 
     
 
