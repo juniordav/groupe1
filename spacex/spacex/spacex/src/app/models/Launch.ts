@@ -4,12 +4,13 @@ export class Launch {
     
 
      flight_number!: number;
-     nationality!: string;
-     customer!: string;
-     land_success! : boolean;
-     land_vehicule! : boolean;
-     launch_date_local! : Date;
+     launch_year!: number;
+     launch_date_utc!: Date;
      mission_name! : string;
      rocket! : Rocket;
+     launch_site!: any;
+     launch_success!: boolean;
+     links!: any;
+
      
   }

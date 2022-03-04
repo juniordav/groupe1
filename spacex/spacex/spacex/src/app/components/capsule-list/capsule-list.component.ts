@@ -17,9 +17,9 @@ export class CapsuleListComponent implements OnInit {
     this.getAllCapsules();
   }
 
-  getAllCapsules() {
+   async getAllCapsules() {
 
-    this.capsuleservice.getAllCapsules().subscribe(
+    await this.capsuleservice.getAllCapsules().subscribe(
       data => this.capsules = data
     )
 

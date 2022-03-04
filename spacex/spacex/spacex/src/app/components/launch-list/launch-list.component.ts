@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Launch } from 'src/app/models/Launch';
 import { LaunchService } from 'src/app/services/launch_service';
 
@@ -10,8 +11,9 @@ import { LaunchService } from 'src/app/services/launch_service';
 export class LaunchListComponent implements OnInit {
 
   launches!: Launch[];
+  urlDetail = '/launch-list/launch-detail'
   
-  constructor(private launchService: LaunchService) { }
+  constructor(private launchService: LaunchService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
    
@@ -20,13 +22,18 @@ export class LaunchListComponent implements OnInit {
 
   }
 
-  getAllLaunches() {
+  async getAllLaunches() {
 
-    this.launchService.getAllLaunches().subscribe(
+    await this.launchService.getAllLaunches().subscribe(
       data => this.launches = data
     )
 
-    console.log("launches", this.launches);
+
+  }
+
+
+  detail(id: number){
+    this.router.navigate(['/launch-list/launch-detail' , id  ]);
 
   }
 
