@@ -4,6 +4,7 @@
         <h1 *ngFor="let launch of launches">{{launch.mission_name}}🚀</h1>
         <ul class = "list-group" *ngFor="let launch of launches">
             <li class="list-group-item">Rocket : {{launch.rocket.rocket_name}} </li>
+            <li class="list-group-item">Rocket type : {{launch.rocket.rocket_type}} </li>
             <li class="list-group-item">Date launch: {{launch.launch_date_utc}} </li>
             <li class="list-group-item">Landing Success: {{launch.launch_success}} </li>
             <li class="list-group-item img-fluid"><img [src]="launch.links.mission_patch" height="100px"/></li>            

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Capsule } from 'src/app/models/Capsule';
 import { CapsuleService } from 'src/app/services/capsule.service';
 
@@ -10,19 +11,28 @@ import { CapsuleService } from 'src/app/services/capsule.service';
 export class CapsuleListComponent implements OnInit {
 
   capsules!: Capsule[];
-  constructor(private capsuleservice: CapsuleService) { }
+  constructor(private router: Router, private capsuleservice: CapsuleService) { }
 
   ngOnInit(): void {
 
     this.getAllCapsules();
   }
 
-  getAllCapsules() {
+  async getAllCapsules() {
 
-    this.capsuleservice.getAllCapsules().subscribe(
+    await this.capsuleservice.getAllCapsules().subscribe(
       data => this.capsules = data
+     
     )
+    console.log(this.capsules);
 
   }
+
+  detail(id: string){
+    this.router.navigate(['/capsule-list/capsule-detail/' , id  ]);
+
+  }
+
+  
 
 }

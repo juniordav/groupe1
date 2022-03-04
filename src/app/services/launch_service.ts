@@ -8,16 +8,16 @@ import {Launch} from "src/app/models/Launch"
 })
 export class LaunchService {
 
-  lauchesapiUrl: string = "launches";
+  launchesapiUrl: string = "launches";
 
   constructor(private http: HttpClient, private abstractService: AbstractService){}
 
   public getAllLaunches<Response>() {
-     return this.http.get<Launch[]>(this.abstractService.getUrl(this.lauchesapiUrl));
+     return this.http.get<Launch[]>(this.abstractService.getUrl(this.launchesapiUrl));
   }
 
   public getOneLaunch<Response>(id : number) {
-    return this.http.get<Launch[]>(this.abstractService.getUrl(this.lauchesapiUrl + '/' + `?flight_number=${id}`));
+    return this.http.get<Launch[]>(this.abstractService.getUrl(this.launchesapiUrl + '/' + `?flight_number=${id}`));
  }
 
 }

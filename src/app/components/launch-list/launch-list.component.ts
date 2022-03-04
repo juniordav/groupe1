@@ -13,7 +13,7 @@ export class LaunchListComponent implements OnInit {
   launches!: Launch[];
   urlDetail = '/launch-list/launch-detail'
   
-  constructor(private launchService: LaunchService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private launchService: LaunchService, private router: Router) { }
 
   ngOnInit(): void {
    
@@ -33,7 +33,7 @@ export class LaunchListComponent implements OnInit {
 
 
   detail(id: number){
-    this.router.navigate(['/launch-list/launch-detail' , id  ]);
+    this.router.navigate([this.urlDetail , id  ]);
 
   }
 

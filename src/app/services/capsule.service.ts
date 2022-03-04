@@ -17,4 +17,8 @@ export class CapsuleService {
      return this.http.get<Capsule[]>(this.abstractService.getUrl(this.capsulesapiUrl));
   }
 
+  public getOneCapsule<Response>(id : string) {
+    return this.http.get<Capsule[]>(this.abstractService.getUrl(this.capsulesapiUrl + '/' + `?capsule_serial=${id}`));
+ }
+
 }
