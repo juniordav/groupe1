@@ -2,10 +2,10 @@
 
 This project was created withe Space X Api. The objective is to display the launches and the capsules of this API.
 
-
 # Mock-up Application
-
-![Homepage](./assets/images/Homepage.png)
+![Homepage](./screens/capsules.png)
+![Capsules](./screens/Homepage.png)
+![Launchs](./screens/launches.png)
 
 ## URL
 

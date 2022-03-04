@@ -1,12 +1,14 @@
-version: '3.5' # We use version 3.5 syntax
-services: # Here we define our service(s)
-    spacex-service: # The name of the service
-      container_name: spacexcontainer  # Container name
-      build: ./spacex
-      volumes: # Volume binding
-       - './spacex:/usr/src/app' 
-      working_dir: /usr/src/app/spacex/spacex
-      ports: 
-        - '4200:4200' # Port mapping
-      command: > 
-        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+version: '3'
+
+services:
+  ng:
+    build: 
+      context: .
+      target: 'develop-stage'
+    container_name: template-ng
+    ports:
+      - 4200:4200
+    volumes:
+      - ./app:spacex/spacex/spacex/app 
+      # Link the app folder to the workdir
+      - spacex/spacex/spacex/app/node_modules
