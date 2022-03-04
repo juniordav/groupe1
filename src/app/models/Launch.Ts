@@ -1,13 +1,17 @@
+import { Rocket } from "./Rocket";
+
+ 
 export class Launch {
-    constructor(
-     public rocket_id: string,
-     public rocket_name: string,
-     public rocket_type : string,
-     public nationality: string,
-     public customer: string,
-     public land_success : boolean,
-     public land_vehicule : boolean,
-     public launch_date_local : Date
+    
+ 
+     flight_number!: number;
+     launch_year!: number;
+     launch_date_utc!: Date;
+     mission_name! : string;
+     rocket! : Rocket;
+     launch_site!: any;
+     launch_success!: boolean;
+     links!: any;
+ 
      
-    ) { }
   }
