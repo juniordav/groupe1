@@ -9,6 +9,6 @@ services:
     ports:
       - 4200:4200
     volumes:
-      - ./app:spacex/spacex/spacex/app 
+      - ./app:/app
       # Link the app folder to the workdir
-      - spacex/spacex/spacex/app/node_modules
+      

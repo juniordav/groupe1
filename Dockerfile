@@ -8,7 +8,7 @@ WORKDIR /spacex/spacex/spacex/app
 ENV PATH spacex/spacex/spacex/app/node_modules/.bin:$PATH
 
 # add package.json file into container
-COPY spacex/spacex/spacex/app/package.json ./
+COPY spacex/spacex/spacex/package.json ./
 
 # add package-lock.json file into container
 # COPY app/package-lock.json ./
@@ -18,7 +18,7 @@ RUN npm install
 RUN npm install -g @angular/cli@11
 
 # copy app folder into container 
-COPY spacex/spacex/spacex/app/ ./
+COPY . .
 
 # container open port 4200
 EXPOSE 4200
