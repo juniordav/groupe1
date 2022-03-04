@@ -29,6 +29,7 @@ import { AbstractService } from './services/abstract.service';
     AppRoutingModule,
     HttpClientModule,
   ],
+  
   providers: [LaunchService,AbstractService, CapsuleService, AppConfig],
   bootstrap: [AppComponent]
 })

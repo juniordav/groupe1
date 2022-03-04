@@ -1,1 +1,25 @@
-<p>capsule-detail works!</p>
+<section class="u-clearfix u-palette-2-light-3 u-section-3" id="sec-d3a8">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-image u-layout-cell u-left-cell u-size-40 u-image-1">
+              <div class="u-container-layout"></div>
+            </div>
+            <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-white u-layout-cell-2">
+              <div class="u-container-layout u-valign-middle u-container-layout-2">
+                <h6 class="u-text u-text-1">{{capsule.capsule_id}}</h6>
+                <h2 class="u-text u-text-palette-1-base u-text-2">{{capsule.capsule_serial}}</h2>
+                <p class="">Date: {{capsule.original_launch}}</p>
+
+                <h2 class="u-text u-text-palette-1-base u-text-2" *ngIf="capsule.missions[0].name!=''"> Mission: {{capsule.missions[0].name}} </h2>
+
+                <div class="u-border-10 u-border-palette-2-base u-line u-line-horizontal u-line-1"></div>
+                <p class="u-text u-text-grey-50 u-text-3">{{capsule.details}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

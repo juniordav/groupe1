@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Capsule } from 'src/app/models/Capsule';
+
 
 @Component({
   selector: 'app-capsule-detail',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./capsule-detail.component.scss']
 })
 export class CapsuleDetailComponent implements OnInit {
+
+
+  @Input() capsule!: Capsule;
 
   constructor() { }
 

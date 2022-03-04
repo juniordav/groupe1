@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Capsule } from 'src/app/models/Capsule';
 import { CapsuleService } from 'src/app/services/capsule.service';
+import { CapsuleDetailComponent } from './capsule-detail/capsule-detail.component';
 
 @Component({
   selector: 'app-capsule-list',
@@ -28,10 +29,6 @@ export class CapsuleListComponent implements OnInit {
 
   }
 
-  detail(id: string){
-    this.router.navigate(['/capsule-list/capsule-detail/' , id  ]);
-
-  }
 
   
 

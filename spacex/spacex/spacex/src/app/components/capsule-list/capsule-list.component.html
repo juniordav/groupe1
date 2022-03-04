@@ -1,14 +1,8 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-<h1>La liste de toutes les capsules lancées par SpaceX 🛸</h1>
-<ul class = "list-group" >
-    <li class="list-group-item" *ngFor="let capsule of capsules">
-        Mission : {{capsule.missions[0].name}} 🛸
-    <button type="button" class="btn btn-primary btn-lg"
-     (click)="getAllCapsules()">Voir détail</button> </li>
-   
-</ul>
+<div class="row">
+    <div class="col-6" *ngFor="let capsule of capsules">
+        <app-capsule-detail [capsule]="capsule" ></app-capsule-detail>
+
+    </div>
 </div>
-</div>
-</div>
+
+

@@ -5,6 +5,8 @@ export class Capsule {
     status!: string;
     missions!: Array<{name : string, flight: string}>;
     type!: string;
+    original_launch!: Date;
+    details!:string;
     
 
 }
